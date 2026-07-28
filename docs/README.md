@@ -13,6 +13,9 @@ ProjectOS is a portable operating system for reliable AI-assisted project work.
 7. [Batch production](batch-production.md)
 8. [Adoption and governance](adoption-and-governance.md)
 9. [Frequently asked questions](faq.md)
+10. [Skill Admission Standard](skill-admission-standard.md)
+11. [Adaptive, model-agnostic kernel](adaptive-kernel.md)
+12. [Agent skill ecosystem audit](skill-ecosystem-audit.md)
 
 ## Reference implementation
 
@@ -28,4 +31,3 @@ ProjectOS is a portable operating system for reliable AI-assisted project work.
 - [Handoff Pack](../templates/handoff-pack.md)
 
 Use the smallest safe operating mode. Treat product-specific capabilities as adapters, verify current availability, and require human review before external or irreversible actions.
-
