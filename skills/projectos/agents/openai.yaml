@@ -1,0 +1,7 @@
+interface:
+  display_name: "ProjectOS"
+  short_description: "Run reliable, reviewable multi-step projects"
+  default_prompt: "Use $projectos to structure this project, define completion criteria, execute it safely, and produce a verified handoff."
+
+policy:
+  allow_implicit_invocation: true
