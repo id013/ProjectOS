@@ -12,6 +12,7 @@ ProjectOS is a portable operating system for reliable AI-assisted project work.
 6. [Context and handoffs](context-and-handoffs.md)
 7. [Batch production](batch-production.md)
 8. [Adoption and governance](adoption-and-governance.md)
+9. [Frequently asked questions](faq.md)
 
 ## Reference implementation
 
