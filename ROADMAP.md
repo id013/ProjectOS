@@ -1,34 +1,37 @@
 # ProjectOS Roadmap
 
-## 1.3 — Public Review
+The roadmap prioritizes evidence, interoperability, and contributor trust over feature volume.
 
-- English-first repository foundation;
-- core documentation and reusable templates;
-- installable ProjectOS skill;
-- website and SEO reference workflow;
-- contribution, security, and community standards.
+## 1.3 вЂ” Public Review
 
-## 1.4 — Pilot Evidence
+- [x] English-first repository foundation
+- [x] Core documentation and reusable templates
+- [x] Installable ProjectOS skill
+- [x] Website and SEO reference workflow
+- [x] Contribution, security, and community standards
+- [x] Automated repository quality gate
 
-- three complete public cases;
-- automated Markdown, link, and secret checks;
-- workflow scorecard;
-- feedback and issue triage process;
-- stable release criteria.
+## 1.4 вЂ” Pilot Evidence
 
-## 1.5 — Workflow Packs
+- [ ] Three complete public case studies with measurable outcomes
+- [ ] Workflow scorecard and evaluation rubric
+- [ ] Feedback and issue-triage process
+- [ ] Stable-release criteria
+- [ ] Contributor onboarding test
 
-- website and SEO operations;
-- research and decision support;
-- content production;
-- technical delivery;
-- recurring operations.
+## 1.5 вЂ” Workflow Packs
 
-## 2.0 — Stable
+- [ ] Website and SEO operations
+- [ ] Research and decision support
+- [ ] Content production
+- [ ] Technical delivery
+- [ ] Recurring operations
 
-- evidence from production pilots;
-- versioned compatibility matrix;
-- governance for external maintainers;
-- published benchmark and evaluation suite;
-- migration and deprecation policy.
+## 2.0 вЂ” Stable
+
+- [ ] Evidence from production pilots
+- [ ] Versioned compatibility matrix
+- [ ] Governance for external maintainers
+- [ ] Published benchmark and evaluation suite
+- [ ] Migration and deprecation policy
 
