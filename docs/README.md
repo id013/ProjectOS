@@ -1,5 +1,12 @@
 # ProjectOS Documentation
 
+## Start here
+
+- [10-minute quickstart](quickstart.md)
+- [Platform adapters](platform-adapters.md)
+- [Starter packs](../starter-packs/)
+- [Agent handoff benchmark](../benchmarks/agent-handoff/README.md)
+
 ProjectOS is a portable operating system for reliable AI-assisted project work.
 
 ## Start here

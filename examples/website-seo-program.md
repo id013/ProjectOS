@@ -1,6 +1,6 @@
-# Example: Website and SEO Transformation
+# Anonymized Example: Website and SEO Transformation
 
-This example covers a Tilda-based website that needs a new SEO structure, updated design system, improved service pages, and a large editorial program.
+This fictionalized and anonymized example covers a no-code website that needs a new SEO structure, updated design system, improved service pages, and a large editorial program. It contains no client identity, domain, private data, or unapproved performance claim.
 
 ## Outcome
 
@@ -56,4 +56,3 @@ Verify URLs, redirects, canonicals, metadata, schema, links, analytics, forms, m
 - mobile and desktop presentation are approved;
 - analytics and conversion events are verified;
 - release notes, limitations, and rollback are recorded.
-
