@@ -1,0 +1,40 @@
+schema_version: "1.0"
+policy: "docs/skill-admission-standard.md"
+default_state: "quarantined"
+
+sources:
+  - id: anthropic-skills
+    repository: "https://github.com/anthropics/skills"
+    trust_basis: "official vendor repository"
+    allowed_use: "discovery-and-review"
+
+  - id: openai-plugins
+    repository: "https://github.com/openai/plugins"
+    trust_basis: "official vendor repository"
+    allowed_use: "discovery-and-review"
+
+  - id: superpowers
+    repository: "https://github.com/obra/superpowers"
+    trust_basis: "mature cross-platform methodology"
+    allowed_use: "discovery-and-review"
+
+  - id: voltagent-catalog
+    repository: "https://github.com/VoltAgent/awesome-agent-skills"
+    trust_basis: "curated discovery index"
+    allowed_use: "discovery-only"
+
+rules:
+  pin_approved_versions: true
+  execute_during_discovery: false
+  require_license_review: true
+  require_permission_contract: true
+  require_eval_suite: true
+  require_human_approval_for_external_writes: true
+  allow_automatic_core_promotion: false
+  require_rollback_target: true
+
+reviewed_candidates:
+  total: 20
+  report: "docs/skill-ecosystem-audit.md"
+  admission_state: "quarantined"
+  note: "Architectural review completed; executable admission suites are still required."
