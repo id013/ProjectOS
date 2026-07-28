@@ -1,131 +1,138 @@
 # ProjectOS
 
-**The open operating system for reliable AI-assisted work.**
+**Keep complex AI projects reliable after the chat ends.**
 
-ProjectOS turns scattered chats, prompts, files, and agent runs into a durable project workflow with explicit context, sources of truth, quality gates, handoffs, permissions, and verifiable completion criteria.
+ProjectOS is an open, model-agnostic operating system for multi-step AI-assisted work. It turns scattered chats, prompts, files, and agent runs into durable project memory with sources of truth, quality gates, handoffs, permissions, and verifiable completion.
 
 > **Status:** Public Review · **Version:** 1.3.0-rc2 · **License:** MIT
 
+## Try it in 10 minutes
+
+You do not need to learn the whole system first.
+
+1. Download or clone this repository.
+2. Open the folder in your AI coding or work agent.
+3. Copy the prompt below into a new session.
+4. Answer the agent's questions.
+5. Review the charter and first workflow card it creates.
+
+```text
+Use the ProjectOS instructions in this repository.
+
+Initialize a new project in Lite mode for this outcome:
+[describe one result you want]
+
+Create only:
+1. a concise Project Charter;
+2. a Source of Truth list;
+3. assumptions, risks, and missing inputs;
+4. one workflow card with a measurable Definition of Done;
+5. the next three actions.
+
+Do not produce the final deliverable yet. Do not perform external actions.
+Separate confirmed facts from assumptions and ask only questions that block progress.
+```
+
+**Success after 10 minutes:** you have a reviewable project brief, trusted inputs, explicit completion criteria, and a safe next action—stored as files rather than trapped in a conversation.
+
+[Run the full quickstart](docs/quickstart.md) · [Choose a starter pack](starter-packs/) · [Set up your agent](docs/platform-adapters.md)
+
 ## Why ProjectOS?
 
-AI can produce useful work quickly. Long-running projects still fail when decisions stay inside chats, context drifts, sources conflict, batch output becomes generic, or external actions happen without review.
+AI can create useful work quickly. Projects still break when decisions stay inside chats, context drifts, sources conflict, batch output becomes generic, or an agent acts externally without review.
 
-ProjectOS gives teams a portable operating layer that works across ChatGPT Work, Codex, and other AI agents:
+ProjectOS adds the operating layer:
 
 - **Durable context** — project knowledge lives in versioned artifacts, not chat memory.
-- **Reviewable execution** — every substantial task has an outcome, constraints, and Definition of Done.
+- **Reviewable execution** — every substantial task has one outcome and a Definition of Done.
 - **Source-of-truth control** — facts, assumptions, decisions, and risks stay separate.
-- **Quality at scale** — batch manifests, pilot runs, sampling, and independent QA reduce silent failure.
-- **Safe actions** — permission levels and human gates protect publishing, sending, payments, and irreversible changes.
-- **Portable handoffs** — move work between people, models, chats, and tools without starting over.
+- **Quality at scale** — validate a template, run a pilot, then produce and sample the batch.
+- **Safe actions** — human gates protect publishing, sending, payments, and irreversible changes.
+- **Portable handoffs** — continue with another person, model, chat, or tool without starting over.
+
+## Choose a starter pack
+
+| Starter pack | Use it to produce |
+|---|---|
+| [Website & SEO](starter-packs/website-seo.md) | Audits, site architecture, service pages, editorial programs, and release QA |
+| [Software Product](starter-packs/software-product.md) | Product changes with requirements, implementation, tests, review, and release notes |
+| [Research & Content](starter-packs/research-content.md) | Evidence-backed research and controlled content production |
+
+Each pack defines the first inputs, workflow, gates, deliverables, and a ready-to-use initialization prompt.
+
+## Works across agents
+
+The core is plain Markdown and folders. Platform adapters explain how to load the same operating rules in:
+
+- OpenAI Codex and ChatGPT workspaces;
+- Claude Code;
+- Gemini CLI;
+- Cursor and other repository-aware agents.
+
+Adapters may change. Project memory and completion rules do not. See [Platform adapters](docs/platform-adapters.md).
 
 ## The core loop
 
 ```text
 Goal
-  → Project Charter and Project DNA
-  → Sources of Truth
-  → Workflow Card and Context Manifest
-  → Execution
-  → Independent Quality Gate
-  → Approved Deliverable
-  → Updated Registries and Handoff
-  → Retrospective and Controlled Improvement
+  → Charter and trusted sources
+  → Workflow card and context manifest
+  → Focused execution
+  → Independent quality gate
+  → Approved deliverable
+  → Updated registers and handoff
+  → Retrospective and controlled improvement
 ```
 
 Chats are execution sessions. Project artifacts are memory. Approved sources are stronger than conversation history.
 
-## Who it is for
-
-ProjectOS is designed for:
-
-- founders and operators running AI-assisted projects;
-- agencies producing research, websites, SEO programs, and content at scale;
-- product, marketing, operations, and knowledge-work teams;
-- AI leads who need repeatable workflows, governance, and auditability;
-- contributors building reusable agent skills and playbooks.
-
-## Example workflows
-
-- redesign a website and SEO architecture;
-- produce service and editorial pages in controlled batches;
-- run customer and competitor research;
-- create reports, strategy documents, spreadsheets, and presentations;
-- coordinate long-running technical or operational work;
-- package repeatable processes as agent skills.
-
 ## Operating modes
 
-| Mode | Best for | Required control |
+| Mode | Best for | Minimum control |
 |---|---|---|
-| **Lite** | Short, low-risk work with one deliverable | Self-check plus human review before publication |
-| **Standard** | Multi-step projects with several sources or outputs | Core registries and an independent reviewer |
-| **Advanced** | Long-running, regulated, expensive, or reputation-sensitive work | Full audit trail, dependencies, fact-checking, and release gate |
+| **Lite** | Short, low-risk work with one deliverable | Charter, trusted inputs, self-check, human review before publication |
+| **Standard** | Multi-step projects with several sources or outputs | Core registers, handoff, independent review |
+| **Advanced** | Long-running, regulated, expensive, or reputation-sensitive work | Full audit trail, dependencies, fact-checking, release gate |
 | **Program** | Several connected projects | Shared sources of truth and cross-project change control |
 
-Start with the smallest mode that safely fits the work. Increase control when scale, external publication, sensitive data, or irreversible actions raise the risk.
+Start with the smallest mode that safely fits the work.
 
-## Quick start
+## Verify portability
 
-1. Open this repository as a local project or ChatGPT/Codex workspace.
-2. Read `AGENTS.md` for the durable operating rules.
-3. Choose a workflow from the catalog.
-4. Define the outcome, constraints, sources of truth, and Definition of Done.
-5. Run one focused task per primary outcome.
-6. Complete the Quality Gate before publishing or changing external systems.
-7. Update the project registers and handoff before closing the task.
+ProjectOS includes a [compatibility benchmark](benchmarks/agent-handoff/) for testing whether two different agents can start, transfer, verify, and complete the same project without losing important state.
 
-## Repository structure
+The benchmark records evidence instead of claiming universal compatibility. Results should name the tools, versions, date, prompts, failures, and human interventions.
 
-```text
-AGENTS.md                 Durable instructions for AI agents
-README.md                 Product overview and quick start
-docs/                     Architecture, lifecycle, workflows, QA, and examples
-templates/                Project artifacts, workflow cards, and handoffs
-checklists/               Domain-specific quality checks
-skills/                   Reusable and vendored agent skills
-.agents/                  Shared product and marketing context
-```
+## Explore
 
-
-## Explore the system
-
-- **[Documentation hub](docs/README.md)** — the complete operating model
-- **[Getting started](docs/getting-started.md)** — launch your first ProjectOS project
-- **[Workflow catalog](docs/workflow-catalog.md)** — choose a repeatable workflow
-- **[Templates](templates/)** — charters, manifests, gates, decisions, and handoffs
-- **[Website and SEO example](examples/website-seo-program.md)** — an end-to-end reference program
-- **[Installable ProjectOS skill](skills/projectos/SKILL.md)** — use the operating system directly with an AI agent
-- **[Roadmap](ROADMAP.md)** — what comes next
+- [10-minute quickstart](docs/quickstart.md)
+- [Documentation hub](docs/README.md)
+- [Workflow catalog](docs/workflow-catalog.md)
+- [Templates](templates/)
+- [Anonymized website and SEO program](examples/website-seo-program.md)
+- [Installable ProjectOS skill](skills/projectos/SKILL.md)
+- [Skill admission standard](docs/skill-admission-standard.md)
+- [Roadmap](ROADMAP.md)
 
 ## What ProjectOS is not
 
-ProjectOS is not a promise of fully autonomous work, a replacement for subject-matter review, or a guarantee that every AI output is correct. It is a practical system for making AI-assisted work easier to inspect, transfer, repeat, and improve.
+ProjectOS is not a promise of autonomous correctness, a replacement for subject-matter review, or proof that every model behaves the same. It is a practical system for making AI-assisted work easier to inspect, transfer, repeat, and improve.
 
-## Roadmap
+## Help ProjectOS earn trust
 
-- publish the complete English documentation set;
-- release an installable ProjectOS skill;
-- add complete public case studies;
-- add automated repository validation;
-- build workflow packs for website/SEO, research, content operations, and technical delivery;
-- establish a stable release after public pilots.
+ProjectOS is in Public Review. The most valuable contributions are:
 
-## Contributing
+- run the quickstart and report where you became confused;
+- publish an anonymized case with evidence and limitations;
+- submit a dated compatibility benchmark result;
+- improve an adapter or starter pack;
+- contribute a tested workflow card.
 
-ProjectOS is in Public Review. Useful contributions include:
-
-- tested workflow cards;
-- public case studies with measurable outcomes;
-- clearer templates and quality gates;
-- portability improvements across AI agents;
-- corrections backed by primary evidence.
-
-Please read `CONTRIBUTING.md` and `SECURITY.md` before submitting changes.
+Read [CONTRIBUTING.md](CONTRIBUTING.md), open an issue, or start a GitHub Discussion.
 
 ## License
 
-ProjectOS is released under the MIT License. Vendored skills retain their own license and provenance notices.
+ProjectOS is released under the MIT License. Vendored skills retain their own licenses and provenance notices.
 
 ---
 

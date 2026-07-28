@@ -1,5 +1,13 @@
 # ProjectOS Roadmap
 
+## Current adoption milestone
+
+- validate the 10-minute quickstart with five external users;
+- publish three dated handoff benchmark runs across at least three agent products;
+- accept the first external workflow contribution;
+- publish one evidence-backed, anonymized case study;
+- promote a stable release only after the documented pilot criteria pass.
+
 The roadmap prioritizes evidence, interoperability, and contributor trust over feature volume.
 
 ## 1.3 — Public Review
