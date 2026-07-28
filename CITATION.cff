@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use ProjectOS in research, teaching, or a published workflow, please cite this repository."
+title: "ProjectOS: An Open Operating System for Reliable AI-Assisted Work"
+type: software
+version: 1.3.0-rc2
+date-released: 2026-07-28
+license: MIT
+repository-code: "https://github.com/id013/ProjectOS"
+url: "https://github.com/id013/ProjectOS"
+authors:
+  - family-names: "ProjectOS Contributors"
