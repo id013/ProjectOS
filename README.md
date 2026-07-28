@@ -87,6 +87,17 @@ skills/                   Reusable and vendored agent skills
 .agents/                  Shared product and marketing context
 ```
 
+
+## Explore the system
+
+- **[Documentation hub](docs/README.md)** — the complete operating model
+- **[Getting started](docs/getting-started.md)** — launch your first ProjectOS project
+- **[Workflow catalog](docs/workflow-catalog.md)** — choose a repeatable workflow
+- **[Templates](templates/)** — charters, manifests, gates, decisions, and handoffs
+- **[Website and SEO example](examples/website-seo-program.md)** — an end-to-end reference program
+- **[Installable ProjectOS skill](skills/projectos/SKILL.md)** — use the operating system directly with an AI agent
+- **[Roadmap](ROADMAP.md)** — what comes next
+
 ## What ProjectOS is not
 
 ProjectOS is not a promise of fully autonomous work, a replacement for subject-matter review, or a guarantee that every AI output is correct. It is a practical system for making AI-assisted work easier to inspect, transfer, repeat, and improve.
