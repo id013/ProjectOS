@@ -1,117 +1,121 @@
-# Project OS for ChatGPT Work
+# ProjectOS
 
-Версия: **1.3.0-rc1**  
-Статус: **Public Review — универсальный комплект готов к пилоту**  
-Назначение: переносимая операционная система для ведения множества проектов с ChatGPT Work без зависимости от памяти отдельных чатов.
+**The open operating system for reliable AI-assisted work.**
 
-## Что это
+ProjectOS turns scattered chats, prompts, files, and agent runs into a durable project workflow with explicit context, sources of truth, quality gates, handoffs, permissions, and verifiable completion criteria.
 
-Project OS превращает ChatGPT Work из «умного исполнителя в одном разговоре» в управляемый проектный контур:
+> **Status:** Public Review · **Version:** 1.3.0-rc2 · **License:** MIT
 
-```text
-Цель человека
-  -> Project Charter + Project DNA
-  -> реестр источников истины
-  -> карта этапов и отдельных Work-задач
-  -> целевой Context Manifest
-  -> выполнение и независимая проверка
-  -> утвержденный артефакт
-  -> обновленные реестры и Handoff Pack
-  -> ретроспектива
-  -> контролируемое улучшение Project OS
-```
+## Why ProjectOS?
 
-Чат — рабочая сессия. Документы — память проекта. Утвержденный источник истины всегда сильнее истории разговора.
+AI can produce useful work quickly. Long-running projects still fail when decisions stay inside chats, context drifts, sources conflict, batch output becomes generic, or external actions happen without review.
 
-## Быстрый старт
+ProjectOS gives teams a portable operating layer that works across ChatGPT Work, Codex, and other AI agents:
 
-1. Скопируйте этот комплект в отдельную папку проекта или в ChatGPT Project.
-2. Добавьте исходные материалы в `02_Sources/`, не переименовывая оригиналы без необходимости.
-3. Запустите [универсальный промпт инициализации](docs/09_bootstrap.md).
-4. Утвердите уровень сложности, критические границы и источники истины.
-5. Выполняйте каждый этап в отдельной Work-задаче с [Context Manifest](templates/session_templates.md).
-6. Закрывайте этап только после Quality Gate и обновления реестров.
+- **Durable context** — project knowledge lives in versioned artifacts, not chat memory.
+- **Reviewable execution** — every substantial task has an outcome, constraints, and Definition of Done.
+- **Source-of-truth control** — facts, assumptions, decisions, and risks stay separate.
+- **Quality at scale** — batch manifests, pilot runs, sampling, and independent QA reduce silent failure.
+- **Safe actions** — permission levels and human gates protect publishing, sending, payments, and irreversible changes.
+- **Portable handoffs** — move work between people, models, chats, and tools without starting over.
 
-Если вы еще не знаете, какой процесс запускать, начните с [каталога сценариев](docs/21_workflow_catalog.md). Для длительной задачи сначала сформулируйте результат, ограничения и проверяемый Definition of Done.
-
-## Уровни сложности
-
-| Уровень | Когда применять | Минимальный комплект | Контроль |
-|---|---|---|---|
-| Lite | до 1 недели, один результат, 1–2 участника, низкий риск | Charter Lite, задачи, источники, решения, итог | самопроверка + человек перед публикацией |
-| Standard | 1–8 недель, несколько результатов/источников | все основные реестры, этапы, handoff | отдельный Critic/QA |
-| Advanced | долгий, регулируемый, дорогой или репутационно значимый проект | полный комплект, владельцы, зависимости, аудит | независимый фактчек и финальный аудитор |
-| Program | несколько связанных проектов | Advanced в подпроектах + program registry и общие SoT | межпроектный совет изменений |
-
-Рекомендация повышается на один уровень при наличии хотя бы двух факторов: более 10 источников; более 5 рабочих потоков; внешняя публикация; персональные/финансовые данные; необратимые действия; массовое производство; несколько владельцев; высокие финансовые или правовые последствия. При сомнении начинайте со Standard и упрощайте после диагностики.
-
-## Состав комплекта
-
-- [Архитектура](docs/01_architecture.md)
-- [Жизненный цикл](docs/02_lifecycle.md)
-- [Протокол Work-задач и чатов](docs/03_work_protocol.md)
-- [Context Engineering](docs/04_context_engineering.md)
-- [Аудит, конфликты и версии](docs/05_audit_and_versioning.md)
-- [Quality Gate](docs/06_quality_gates.md)
-- [Массовый конвейер](docs/07_batch_pipeline.md)
-- [Роли и автоматизация](docs/08_roles_and_automation.md)
-- [Bootstrap Protocol](docs/09_bootstrap.md)
-- [Ежедневные команды](docs/10_daily_commands.md)
-- [Особенности ChatGPT Work](docs/11_chatgpt_work.md)
-- [Переносимость и безопасность](docs/12_portability_and_security.md)
-- [Самоулучшение](docs/13_self_improvement.md)
-- [Структура хранения](docs/14_storage_structure.md)
-- [Варианты внедрения и план на 7 дней](docs/15_implementation_guide.md)
-- [Практический пример Crynet](docs/16_crynet_example.md)
-- [Жесткий аудит и тест трех сценариев](docs/17_validation_audit.md)
-- [Интеграция First Customer Finder](docs/18_first_customer_finder_integration.md)
-- [Editorial Humanization Gate](docs/19_editorial_humanization_gate.md)
-- [Focus Mode](docs/20_focus_mode.md)
-- [Каталог сценариев](docs/21_workflow_catalog.md)
-- [Реестр возможностей, зрелости и разрешений](docs/22_capability_registry.md)
-- [Завершение и выпуск](docs/23_completion_and_release.md)
-- [Рост репозитория и видимость в AI-поиске](docs/24_repository_growth_and_ai_discoverability.md)
-- [Реестр внешних skills](skills/SKILLS_REGISTRY.md)
-- [Матрица покрытия требований](REQUIREMENTS_TRACEABILITY.md)
-- [Шаблоны основных документов](templates/core_artifacts.md)
-- [Шаблоны сессий, Context Manifest и Handoff](templates/session_templates.md)
-- [Шаблон карточки сценария](templates/workflow_card.md)
-- [Предметные QA-чек-листы](checklists/domain_quality.md)
-
-## Открытый проект
-
-Комплект распространяется по лицензии [MIT](LICENSE). Правила вклада описаны в [CONTRIBUTING.md](CONTRIBUTING.md), порядок сообщения о рисках — в [SECURITY.md](SECURITY.md).
-
-Файл [AGENTS.md](AGENTS.md) дает ChatGPT/Codex минимальные рабочие инструкции сразу после открытия папки или импорта проекта.
-
-## Универсальная структура проекта
+## The core loop
 
 ```text
-00_Project_Control/       # статус, реестры, план, журнал изменений
-01_Project_DNA/           # Charter, DNA, словарь, стандарт качества
-02_Sources/               # неизмененные исходники и их метаданные
-03_Knowledge_Base/        # нормализованные знания и карта знаний
-04_Research/              # исследования и доказательства
-05_Planning/              # этапы, workstreams, планы
-06_Production/            # рабочие материалы и черновики
-07_Quality_Assurance/     # проверки, конфликты, отчеты QA
-08_Deliverables/          # только утвержденные результаты
-09_Handoffs/              # Context Manifest и пакеты передачи
-10_Retrospectives/        # ретроспективы и предложения улучшений
-99_Archive/               # замененные и закрытые версии
+Goal
+  → Project Charter and Project DNA
+  → Sources of Truth
+  → Workflow Card and Context Manifest
+  → Execution
+  → Independent Quality Gate
+  → Approved Deliverable
+  → Updated Registries and Handoff
+  → Retrospective and Controlled Improvement
 ```
 
-## Неподвижные правила
+Chats are execution sessions. Project artifacts are memory. Approved sources are stronger than conversation history.
 
-1. Нельзя молча менять Approved-документ.
-2. Факт без источника и даты маркируется как неподтвержденный.
-3. Допущение не выдается за факт и получает срок проверки.
-4. В одной Work-задаче — одна цель и один основной итоговый артефакт.
-5. Создатель важного результата не является его единственным проверяющим.
-6. Опасные, внешние, платные, юридически значимые и необратимые действия требуют явного согласования человека.
-7. Изменение источника истины запускает проверку зависимых артефактов.
-8. Любая продуктовая функция, зависящая от плана, региона, администратора или интерфейса, проверяется перед включением в процесс.
+## Who it is for
 
-## Полная спецификация
+ProjectOS is designed for:
 
-Комплект разработан по полному мастер-документу `Project_OS_Master_Prompt_RU.md`, включая переносимость, безопасность, самоулучшение, практический пример Crynet, варианты Lite/Standard/Advanced и семидневный план внедрения.
+- founders and operators running AI-assisted projects;
+- agencies producing research, websites, SEO programs, and content at scale;
+- product, marketing, operations, and knowledge-work teams;
+- AI leads who need repeatable workflows, governance, and auditability;
+- contributors building reusable agent skills and playbooks.
+
+## Example workflows
+
+- redesign a website and SEO architecture;
+- produce service and editorial pages in controlled batches;
+- run customer and competitor research;
+- create reports, strategy documents, spreadsheets, and presentations;
+- coordinate long-running technical or operational work;
+- package repeatable processes as agent skills.
+
+## Operating modes
+
+| Mode | Best for | Required control |
+|---|---|---|
+| **Lite** | Short, low-risk work with one deliverable | Self-check plus human review before publication |
+| **Standard** | Multi-step projects with several sources or outputs | Core registries and an independent reviewer |
+| **Advanced** | Long-running, regulated, expensive, or reputation-sensitive work | Full audit trail, dependencies, fact-checking, and release gate |
+| **Program** | Several connected projects | Shared sources of truth and cross-project change control |
+
+Start with the smallest mode that safely fits the work. Increase control when scale, external publication, sensitive data, or irreversible actions raise the risk.
+
+## Quick start
+
+1. Open this repository as a local project or ChatGPT/Codex workspace.
+2. Read `AGENTS.md` for the durable operating rules.
+3. Choose a workflow from the catalog.
+4. Define the outcome, constraints, sources of truth, and Definition of Done.
+5. Run one focused task per primary outcome.
+6. Complete the Quality Gate before publishing or changing external systems.
+7. Update the project registers and handoff before closing the task.
+
+## Repository structure
+
+```text
+AGENTS.md                 Durable instructions for AI agents
+README.md                 Product overview and quick start
+docs/                     Architecture, lifecycle, workflows, QA, and examples
+templates/                Project artifacts, workflow cards, and handoffs
+checklists/               Domain-specific quality checks
+skills/                   Reusable and vendored agent skills
+.agents/                  Shared product and marketing context
+```
+
+## What ProjectOS is not
+
+ProjectOS is not a promise of fully autonomous work, a replacement for subject-matter review, or a guarantee that every AI output is correct. It is a practical system for making AI-assisted work easier to inspect, transfer, repeat, and improve.
+
+## Roadmap
+
+- publish the complete English documentation set;
+- release an installable ProjectOS skill;
+- add complete public case studies;
+- add automated repository validation;
+- build workflow packs for website/SEO, research, content operations, and technical delivery;
+- establish a stable release after public pilots.
+
+## Contributing
+
+ProjectOS is in Public Review. Useful contributions include:
+
+- tested workflow cards;
+- public case studies with measurable outcomes;
+- clearer templates and quality gates;
+- portability improvements across AI agents;
+- corrections backed by primary evidence.
+
+Please read `CONTRIBUTING.md` and `SECURITY.md` before submitting changes.
+
+## License
+
+ProjectOS is released under the MIT License. Vendored skills retain their own license and provenance notices.
+
+---
+
+**Build AI workflows that remain reliable after the chat ends.**
