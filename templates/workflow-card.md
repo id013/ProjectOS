@@ -9,6 +9,20 @@
 
 ## Outcome
 
+- true user-valued result:
+- acceptance test:
+- anti-outcome that must not be reported as success:
+
+## Path optimization
+
+- logic breaks in the proposed approach:
+- recommended route:
+- validated local skills:
+- material capability gap:
+- GitHub discovery required and why:
+- discovery budget:
+- first measurable checkpoint:
+
 ## Required inputs
 
 ## Sources of truth
@@ -34,4 +48,3 @@
 - human approval:
 
 ## Artifacts, handoff, and rollback
-

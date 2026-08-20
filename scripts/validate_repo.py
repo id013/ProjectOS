@@ -82,22 +82,27 @@ def parse_frontmatter(path: Path) -> tuple[dict[str, str], list[str]]:
     return fields, errors
 
 
-def validate_skill() -> list[str]:
-    skill_file = ROOT / "skills" / "projectos" / "SKILL.md"
-    if not skill_file.exists():
-        return ["skills/projectos/SKILL.md: required skill is missing"]
+def validate_skills() -> list[str]:
+    errors: list[str] = []
+    skill_files = sorted((ROOT / "skills").glob("*/SKILL.md"))
+    if not skill_files:
+        return ["skills/: at least one published skill is required"]
 
-    fields, errors = parse_frontmatter(skill_file)
-    unexpected = sorted(set(fields) - {"name", "description"})
-    if unexpected:
-        errors.append(
-            "skills/projectos/SKILL.md: unsupported frontmatter fields: "
-            + ", ".join(unexpected)
-        )
-    if fields.get("name") != "projectos":
-        errors.append("skills/projectos/SKILL.md: name must be 'projectos'")
-    if not fields.get("description"):
-        errors.append("skills/projectos/SKILL.md: description is required")
+    for skill_file in skill_files:
+        relative = skill_file.relative_to(ROOT)
+        fields, skill_errors = parse_frontmatter(skill_file)
+        errors.extend(skill_errors)
+        unexpected = sorted(set(fields) - {"name", "description"})
+        if unexpected:
+            errors.append(
+                f"{relative}: unsupported frontmatter fields: "
+                + ", ".join(unexpected)
+            )
+        expected_name = skill_file.parent.name
+        if fields.get("name") != expected_name:
+            errors.append(f"{relative}: name must be '{expected_name}'")
+        if not fields.get("description"):
+            errors.append(f"{relative}: description is required")
     return errors
 
 
@@ -106,7 +111,7 @@ def main() -> int:
     errors = [
         *validate_english_only(paths),
         *validate_markdown_links(paths),
-        *validate_skill(),
+        *validate_skills(),
     ]
     if errors:
         print("ProjectOS validation failed:")

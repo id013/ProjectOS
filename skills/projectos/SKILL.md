@@ -7,11 +7,12 @@ description: Run substantial, multi-step projects with durable context, sources 
 
 ## Start
 
-1. Identify the outcome, owner, audience, constraints, and stakes.
-2. Choose Lite, Standard, Advanced, or Program mode.
-3. Locate or create the Charter, Source of Truth Register, decisions, assumptions, risks, and Definition of Done.
-4. Select one primary outcome for the current task.
-5. Create a Context Manifest containing only the relevant context.
+1. For substantial work, use `../optimize-task-intake/SKILL.md` to identify the true outcome, acceptance test, anti-outcome, logic breaks, and fastest safe route.
+2. Identify the owner, audience, constraints, and stakes.
+3. Choose Lite, Standard, Advanced, or Program mode.
+4. Locate or create the Charter, Source of Truth Register, decisions, assumptions, risks, and Definition of Done.
+5. Select one primary outcome for the current task.
+6. Create a Context Manifest containing only the relevant context.
 
 Read `references/operating-system.md` when designing the project lifecycle, quality model, handoff, or batch process.
 
@@ -48,4 +49,3 @@ Use a reviewer distinct from the producer for material outputs.
 5. Report what changed, how it was verified, remaining risks, and the next step.
 
 Never mark work complete merely because files were created.
-

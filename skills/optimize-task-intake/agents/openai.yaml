@@ -1,0 +1,4 @@
+interface:
+  display_name: "Optimize Task Intake"
+  short_description: "Find the fastest trusted execution path"
+  default_prompt: "Use $optimize-task-intake to diagnose this task, select trusted skills, and propose the fastest safe execution path."

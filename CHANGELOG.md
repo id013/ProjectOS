@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- added the `optimize-task-intake` skill for outcome diagnosis, logic-break review, bounded capability discovery, and supply-chain-safe skill admission;
+- reserved at least 70% of execution effort for the requested result and capped discovery at 10% for Standard and 15% for Advanced work;
+- made task fit, provenance, security, maintenance, validation, and efficiency dominate candidate scoring; adoption signals account for only 5%;
+- updated repository validation to check every published skill rather than one hard-coded skill;
 - replaced the documentation-first entry point with a 10-minute success path;
 - added Website & SEO, Software Product, and Research & Content starter packs;
 - added portable setup guidance for Codex, ChatGPT, Claude Code, Gemini CLI, and Cursor;
