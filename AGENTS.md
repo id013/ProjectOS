@@ -7,10 +7,12 @@ Use this repository as the durable operating system for multi-step work. Chats a
 ## Start every substantial task
 
 1. Read `README.md`.
-2. Select a workflow in `docs/21_workflow_catalog.md` or create a card from `templates/workflow_card.md`.
-3. Identify the requested outcome, constraints, sources of truth and Definition of Done.
-4. Check capability maturity and minimum permissions with `docs/22_capability_registry.md`.
-5. Use the smallest Project OS mode that safely fits the work.
+2. Use `skills/optimize-task-intake/SKILL.md` to identify the true outcome, acceptance test, logic breaks, and fastest safe route.
+3. Select a workflow in `docs/workflow-catalog.md` or create a card from `templates/workflow-card.md`.
+4. Identify constraints, sources of truth, and Definition of Done.
+5. Check capability maturity and minimum permissions.
+6. Reuse validated local capabilities first. Search GitHub only for a material capability gap; quarantine, audit, pin, and validate before activation.
+7. Use the smallest ProjectOS mode that safely fits the work.
 
 ## Execution rules
 
@@ -22,9 +24,10 @@ Use this repository as the durable operating system for multi-step work. Chats a
 - Require explicit human review before external write, send, publish, payment or irreversible action.
 - For important outputs, separate creator and reviewer roles.
 - For batch production, validate the template first, then run a pilot, then the batch and sample QA.
+- Reserve most effort for the requested result; never report infrastructure or a skill as the business outcome.
+- Bound skill discovery by task value, risk, and budget. Stars are an adoption signal, not proof of fit or safety.
 - Update the relevant registry and handoff before declaring completion.
 
 ## Completion
 
-Use `docs/23_completion_and_release.md`. Report what changed, how it was verified, remaining risks and the next action. Never claim Stable solely because files were produced or published.
-
+Report what changed, how it was verified, remaining risks, and the next action. Never claim Stable solely because files were produced or published.

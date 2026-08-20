@@ -4,7 +4,7 @@
 
 ProjectOS is an open, model-agnostic operating system for multi-step AI-assisted work. It turns scattered chats, prompts, files, and agent runs into durable project memory with sources of truth, quality gates, handoffs, permissions, and verifiable completion.
 
-> **Status:** Public Review · **Version:** 1.3.0-rc2 · **License:** MIT
+> **Status:** Public Review · **Version:** 1.4.0-rc1 · **License:** MIT
 
 ## Try it in 10 minutes
 
@@ -49,6 +49,8 @@ ProjectOS adds the operating layer:
 - **Quality at scale** — validate a template, run a pilot, then produce and sample the batch.
 - **Safe actions** — human gates protect publishing, sending, payments, and irreversible changes.
 - **Portable handoffs** — continue with another person, model, chat, or tool without starting over.
+
+Before substantial execution, ProjectOS can run the [Task Diagnosis and Skill Discovery Gate](skills/optimize-task-intake/SKILL.md). It identifies the actual result and acceptance test, challenges wasteful assumptions, reuses validated capabilities first, and searches GitHub only for a concrete capability gap. External skills are quarantined, pinned, inspected, and validated before activation; repository stars are never treated as proof of safety or fit.
 
 ## Choose a starter pack
 
@@ -111,6 +113,7 @@ The benchmark records evidence instead of claiming universal compatibility. Resu
 - [Templates](templates/)
 - [Anonymized website and SEO program](examples/website-seo-program.md)
 - [Installable ProjectOS skill](skills/projectos/SKILL.md)
+- [Task diagnosis and skill discovery skill](skills/optimize-task-intake/SKILL.md)
 - [Skill admission standard](docs/skill-admission-standard.md)
 - [Roadmap](ROADMAP.md)
 
